@@ -1,0 +1,58 @@
+/* General */
+* { 
+    font-family: Inconsolata;  
+    color: #333;
+}
+body { 
+    padding: 10px; 
+    background-color: #fff;
+}
+h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: 3em;
+    font-style: normal;
+    font-weight: bold;
+
+}
+h3 {
+    font-size: 1.2em;
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 600; 
+}
+p {
+    font-size: 1.4em;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 200;
+}
+a {
+    text-decoration: none;
+}
+a, a:visited, a:focus { color: #4a4a4a; }
+a:active, a:hover { 
+    color: #727272;
+}
+footer a:hover { text-decoration: underline; }
+.uppercase { text-transform: uppercase; }
+.center-text { text-align: center; }
+.clear { margin-bottom: 10%; }
+
+
+
+/* Overrides */
+
+
+
+
+/* Team Design */
+
+
+
+
+/* Queries */
+@media only screen and (max-width: 600px) {
+    h1 { font-size: 2.4em; }
+    h3 { font-size: 1.4em; }
+    
+}
