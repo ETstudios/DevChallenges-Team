@@ -1,27 +1,46 @@
 /* General */
+@font-face {
+   font-family: 'PT serif';
+   src: url('../fonts/PTSerif-Regular.ttf');
+}
+@font-face {
+   font-family: 'Poppins';
+   src: url('../fonts/Poppins-Regular.ttf');
+   font-family: 'Poppins';
+}
+@font-face {
+   font-family: 'Poppins';
+   src: url('../fonts/Poppins-Bold.ttf');
+   font-family: 'Poppins-bold';
+}
 * { 
     font-family: Inconsolata;  
     color: #333;
+    margin: 0;
+    padding: 0;
 }
 body { 
     padding: 10px; 
     background-color: #fff;
 }
-h1 {
-    font-family: 'Space Mono', monospace;
-    font-size: 3em;
-    font-style: normal;
-    font-weight: bold;
-
-}
-h3 {
-    font-size: 1.2em;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'PT serif';
     font-style: normal; 
     font-variant: normal; 
-    font-weight: 600; 
+    font-weight: bold;
+}
+h1 {
+    font-size: 3em;
+}
+h3 {
+    font-size: 1.6em;
+}
+h4 {
+    font-size: 1.2em; 
 }
 p {
-    font-size: 1.4em;
+    font-family: 'Poppins';
+    font-size: 1.1em;
     font-style: normal;
     font-variant: normal;
     font-weight: 200;
@@ -36,7 +55,10 @@ a:active, a:hover {
 footer a:hover { text-decoration: underline; }
 .uppercase { text-transform: uppercase; }
 .center-text { text-align: center; }
-.clear { margin-bottom: 10%; }
+.clear { 
+    clear: both;
+    margin-bottom: 10%; 
+}
 
 
 
@@ -46,13 +68,43 @@ footer a:hover { text-decoration: underline; }
 
 
 /* Team Design */
-
-
+.member {
+    position: relative;
+    height: 400px;
+    margin: 0 auto;
+}
+.member:nth-child(2) div, .member:nth-child(5) div {
+    margin-top: 20px;
+}
+.member img {
+    width: 200px;
+    float: left;
+}
+.member .position {
+    
+}
+.member .position p {
+    width: 200px;
+    font-size: 1em;
+    transform: rotate(90deg);
+    text-transform: uppercase;
+    position: relative;
+    left: -20px;
+    top: 0;
+}
+.member .name {
+    clear: both;
+}
+.member .name p {
+    font-weight: bold;
+}
 
 
 /* Queries */
 @media only screen and (max-width: 600px) {
     h1 { font-size: 2.4em; }
     h3 { font-size: 1.4em; }
-    
+    .member:nth-child(2) div {
+        /* margin-top: 15px; */
+    }
 }
