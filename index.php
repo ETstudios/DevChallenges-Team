@@ -1,5 +1,36 @@
 <?php
-   
+   $teamMembers = array(
+        array(
+            "name"=>"Bill Mahoney",
+            "position"=>"Product Owner",
+            "img"=>"bill.png"
+        ),
+        array(
+            "name"=>"Saba Cabrera",
+            "position"=>"Art Director",
+            "img"=>"saba.png"
+        ),
+        array(
+            "name"=>"Shae Le",
+            "position"=>"Tech Lead",
+            "img"=>"shae.png"
+        ),
+        array(
+            "name"=>"Skylah Lu",
+            "position"=>"UX Designer",
+            "img"=>"skylah.png"
+        ),
+        array(
+            "name"=>"Griff Richards",
+            "position"=>"Developer",
+            "img"=>"griff.png"
+        ),
+        array(
+            "name"=>"Stan John",
+            "position"=>"Developer",
+            "img"=>"stan.png"
+        )
+   );
 ?>
 <!doctype html>
 <html lang="en">
@@ -21,18 +52,15 @@
     <div class="container">
         <header class="row">
             <br>
-            <div class="col-sm-12 col-md-2"> &nbsp; </div>
-            <div class="col-sm-12 col-md-4">
-              <h3>
+            <div class="col-xs-12 col-md-7">
+              <h1>
                   The creative crew
-              </h3>
+              </h1>
            </div>
-           <div class="col-sm-12 col-md-3">
-               <br>
-               <strong>
+           <div class="col-xs-12 col-sm-8 col-md-5">
+               <h3>
                    Who We Are
-               </strong>
-               <br><br>
+               </h3>
                <p>
                     We are a team of creatively diverse, driven, innovative individuals working in various locations from the world.
                </p>
@@ -41,104 +69,22 @@
         </header>
         <div class="clear"> &nbsp; </div>
         <section class="row">
-            <div class="col-xs-6 col-md-4 member">
-                <div>
-                    <div class="col-sm-10">
-                        <img src="img/bill.png" alt="Bill Mahoney portrait">
+            <?php foreach($teamMembers as $member) { ?>
+                <div class="col-xs-6 col-md-4 member">
+                    <div class="portrait">
+                        <img src="img/<?php echo $member['img']; ?>" alt="<?php echo $member['name']; ?> portrait">
+                        <span class="position">
+                            <?php echo $member['position']; ?>
+                        </span>
                     </div>
-                    <div class="col-sm-2 position">
-                        <p>
-                            Product Owner
+                    <div>
+                        <p class="name">
+                            <?php echo $member['name']; ?>
                         </p>
-                    </div>
-                    <div class="col-sm-12 name">
-                        <p>
-                            Bill Mahoney
-                        </p>
+                        <br><br>
                     </div>
                 </div>
-            </div>
-            <div class="col-xs-6 col-md-4 member">
-                <div>
-                    <div class="col-sm-10">
-                        <img src="img/saba.png" alt="Saba Cabrera portrait">
-                    </div>
-                    <div class="col-sm-2 position">
-                        <p>
-                            Art Director
-                        </p>
-                    </div>
-                    <div class="col-sm-12 name">
-                        <p>
-                            Saba Cabrera
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-md-4 member">
-                <div>
-                    <div class="col-sm-10">
-                        <img src="img/shae.png" alt="Shae Le portrait">
-                    </div>
-                    <div class="col-sm-2 position">
-                        <p>
-                            Tech Lead
-                        </p>
-                    </div>
-                    <div class="col-sm-12 name">
-                        <p>
-                            Shae Le
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-md-4 member">
-                <div>
-                    <div class="col-sm-10">
-                        <img src="img/skylah.png" alt="Skylah Lu portrait">
-                    </div>
-                    <div class="col-sm-2 position">
-                        <p>
-                            UX Designer
-                        </p>
-                    </div>
-                    <div class="col-sm-12 name">
-                        <p>
-                            Skylah Lu
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-md-4 member">
-                <div>
-                    <div class="col-sm-10">
-                        <img src="img/griff.png" alt="Griff Richards portrait">
-                    </div>
-                    <div class="col-sm-2 position">
-                        <p>
-                            Developer
-                        </p>
-                    </div>
-                    <div class="col-sm-12 name">
-                        <p>
-                            Griff Richards
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-md-4 member">
-                <div>
-                    <img src="img/stan.png" alt="Stan John portrait">
-                    <p class="position">
-                        Developer
-                    </p>
-                    <div class="col-sm-12 name">
-                        <p>
-                            Stan John
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <?php } ?>
         </section>
         <div class="clear"> &nbsp; </div>
         <footer class="row">
